@@ -34,6 +34,7 @@ app.use((req, res, next) => {
     res.render('maintenance.hbs', {
       pageTitle: "maintenance"
     });
+    next();
 });
 
 // MIDDLEWARE: Bereitstellen statischer Strukturen
