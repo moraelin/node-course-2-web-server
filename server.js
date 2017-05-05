@@ -54,6 +54,7 @@ app.get('/', (req, res) => {
   res.render('home.hbs', {
     pageTitle: 'Home Page',
     welcomeMessage: 'Welcome to my Website',
+    port: port
   });
 });
 
