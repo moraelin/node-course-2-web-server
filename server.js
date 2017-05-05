@@ -30,12 +30,12 @@ app.use((req, res, next)=> {
   next(); // sonst gehts nicht weiter
 });
 
-app.use((req, res, next) => {
-    res.render('maintenance.hbs', {
-      pageTitle: "maintenance"
-    });
-    next();
-});
+// app.use((req, res, next) => {
+//     res.render('maintenance.hbs', {
+//       pageTitle: "maintenance"
+//     });
+//     next();
+// });
 
 // MIDDLEWARE: Bereitstellen statischer Strukturen
 app.use(express.static(__dirname + '/public'));
