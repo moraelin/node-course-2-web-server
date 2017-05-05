@@ -1,7 +1,16 @@
+// require
+// app express
+// hbs.registerPartials
+// hbs helpers
+// app.set viewengine
+// app.use (MIDDLEWARE)
+//
+
 const express = require('express');
 const hbs = require('hbs');
 const fs = require('fs');
 
+const port = process.env.PORT || 3000;
 var app = express();
 
 // Parameter setzen (hier die View Engine)
@@ -66,6 +75,6 @@ app.get('/bad', (req, res) => {
 
 // der Port, auf den die App hört
 // zweites Argument: Arrow function mit der Nachricht, sobald der Server startet.
-app.listen(3000, () => {
-  console.log('Server is up on port 3000');
+app.listen(port, () => {
+  console.log(`Server is up on port ${port}`);
 });
