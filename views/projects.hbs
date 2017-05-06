@@ -6,10 +6,9 @@
   </head>
   <body>
     {{> header}}
-    <h1>{{pageTitle}}</h1>
     <ul>
-      {{#each p in projects}}
-        <li>{{p.projectName}}</li>
+      {{#each projectList}}
+        <li>The {{projectName}} created on {{date}} can be found at {{location}}</li>
       {{/each}}
     </ul>
     <p>{{port}}</p>

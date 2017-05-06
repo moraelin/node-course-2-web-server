@@ -10,6 +10,8 @@ const express = require('express');
 const hbs = require('hbs');
 const fs = require('fs');
 
+const projects = require('./projects.js');
+
 const port = process.env.PORT || 3000;
 var app = express();
 
@@ -59,10 +61,12 @@ app.get('/', (req, res) => {
   });
 });
 
+var projectList = projects.fetchProjects();
+
 app.get('/projects', (req, res) => {
   res.render('projects.hbs', {
     pageTitle: 'My Projects',
-    projectList: 'project list'
+    projectList: projectList
   });
 });
 
