@@ -59,6 +59,13 @@ app.get('/', (req, res) => {
   });
 });
 
+app.get('/projects', (req, res) => {
+  res.render('projects.hbs', {
+    pageTitle: 'My Projects',
+    projectList: 'project list'
+  });
+});
+
 app.get('/about', (req, res) => {
   // rendert mit der aktuellen view engine die templates
   // das zweite Argument: ein Objekt, das die key-value-pairs ins templates
